@@ -222,25 +222,93 @@ ehoiweiowegtowei
                 Console.WriteLine(ex.Message);
             }
 
-            
-            Random random = new Random(); // псевдовипадкові числа
+
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Random random = new Random();
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(random.Next(100)); 
+                Console.WriteLine(random.Next(100)); ;
+            }
+            Console.WriteLine(random.Next());///0 ... maxInt
+            Console.WriteLine(random.Next(50));///0 ... 49
+            Console.WriteLine(random.Next(50, 100));///50 ... 99
+            Console.WriteLine(random.NextDouble());///50 ... 99
+            Console.ResetColor();
+            if (3 > 8)
+            {
+                Console.WriteLine("Some text");
+            }
+            else
+            {
+                Console.WriteLine("Some text2222");
+            }
+            //while (true)
+            //{
+
+            //}
+            //do
+            //{
+
+            //} while (true);
+
+            //Task 1 
+            Console.WriteLine("It's easy to win forgiveness for being wrong;");
+            Console.WriteLine("being right is what gets you into real trouble.");
+            Console.WriteLine("Bjarne Stroustrup");
+
+            //Task 2
+            int sum = 0;
+            int product = 1;
+            int maxNumber = int.MinValue;
+            int minNumber = int.MaxValue;
+
+            Console.WriteLine("Enter 5 numbers:");
+
+            for (int i = 0; i < 5; i++)
+            {
+                int number3 = int.Parse(Console.ReadLine()!);
+                sum += number3;
+                product *= number3;
+
+                if (number > maxNumber)
+                {
+                    maxNumber = number3;
+                }
+
+                if (number < minNumber) 
+                {
+                    minNumber = number3;
+                }   
             }
 
-            //Console.WriteLine(random.Next()); // [0;Int32.MaxValue)
-            //Console.WriteLine(random.Next(50); // [0;50)
-            //Console.WriteLine(random.Next(50, 100)); // [50;100)
-            //Console.WriteLine(random.NextDouble()); // [0.0;1.0)
+            Console.WriteLine($"Summa = {sum}");
+            Console.WriteLine($"Max number = {maxNumber}");
+            Console.WriteLine($"Min nember = {minNumber}");
+            Console.WriteLine($"Product = {product}");
 
 
+            //Task 3
 
+            Console.WriteLine("Enter number (six digit) :");
+            int number4 = int.Parse(Console.ReadLine()!);
 
+            int reverseNumber = 0;
 
+            while (number4 > 0)
+            {
+                int digit = number4 % 10;
+                reverseNumber = reverseNumber * 10 + digit;
+                number4 /= 10;
+            }
+
+            Console.WriteLine($"Reverse number: {reverseNumber}");
 
         }
+
+
     }
+    
 }
 
 
