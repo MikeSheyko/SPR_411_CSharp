@@ -304,6 +304,85 @@ ehoiweiowegtowei
 
             Console.WriteLine($"Reverse number: {reverseNumber}");
 
+
+            //Task 4
+            Console.Write("Enter low number in range : ");
+            int lower = int.Parse(Console.ReadLine()!);
+
+            Console.Write("Enter up number in range : ");
+            int upper = int.Parse(Console.ReadLine()!);
+
+            int number5 = 0, number6 = 1;
+
+            Console.WriteLine("Fibonacci numbers in range :");
+            while (number5 <= upper)
+            {
+                if (number5 >= lower)
+                {
+                    Console.Write(number5 + " ");
+                }
+
+                int next = number5 + number6;
+                number5 = number6;
+                number6 = next;
+            }
+
+            Console.WriteLine();
+
+            //Task 5
+            Console.Write("Enter A : ");
+            int A = int.Parse(Console.ReadLine()!);
+
+            Console.Write("Enter B : ");
+            int B = int.Parse(Console.ReadLine()!);
+
+            if (A >= B)
+            {
+                Console.WriteLine("Error! A must be less than B!");
+            }
+            else
+            {
+                for (int i = A; i <= B; i++)
+                {
+                    for (int j = 0; j < i; j++)
+                    {
+                        Console.Write(i + " ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+
+            //Task 6
+            Console.Write("Enter length of line : ");
+            int lineLength = int.Parse(Console.ReadLine()!);
+
+            Console.Write("Enter char to fill : ");
+            char symbol = Console.ReadLine()![0];
+
+            Console.Write("Enter direction (horizontal or vertical): ");
+            string dir = Console.ReadLine()!.ToLower();
+
+            if (dir == "horizontal")
+            {
+                for (int i = 0; i < lineLength; i++)
+                {
+                    Console.Write(symbol);
+                }
+                Console.WriteLine();
+            }
+            else if (dir == "vertical")
+            {
+                for (int i = 0; i < lineLength; i++)
+                {
+                    Console.WriteLine(symbol);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error! Invalid direction!");
+            }
+
+
         }
 
 
